@@ -1,0 +1,54 @@
+<odoo>
+	<record id='view_customer_tree' model='ir.ui.view'> 
+		 <field name="name">customer.tree</field>
+         <field name="model">trading.customer</field>
+         <field name="arch" type="xml">
+         	<tree>
+         		<field name='name'/>
+         		<field name='contact_phone'/>
+         	</tree>
+         </field>
+	</record>
+
+	<record id='view_customer_form' model='ir.ui.view'> 
+		 <field name="name">customer.form</field>
+         <field name="model">trading.customer</field>
+         <field name="arch" type="xml">
+         	<form>
+         		<sheet>
+         			<group>
+         			<field name='name'/>
+         			<field name='contact_phone' widget='phone'/>
+         			<field name='email' widget='email'/>
+         			<field name='address'/>
+         			</group>
+         		</sheet>
+         	</form>
+         </field>
+	</record>
+
+
+#Action
+
+	<record id="action_customer"
+		model="ir.actions.act_window">
+		<field name="name">Customer</field>
+		<field name="res_model">trading.customer</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+
+#Menu
+
+	
+		<menuitem id = "trading_main_menu" 
+			name ="Trading" 
+			sequence = "0"/>
+
+		<menuitem id = "customer_menu"
+				name = "customer"
+				parent="trading_main_menu"
+				action="action_customer"/>
+
+
+</odoo>

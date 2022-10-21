@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+trading_management.access_trading_customer,access_trading_customer,trading_management.model_trading_customer,base.group_user,1,1,1,1
+
+trading_management.access_trading_product,access_trading_product,trading_management.model_trading_product,base.group_user,1,1,1,1
+
+trading_management.access_trading_order,access_trading_order,trading_management.model_trading_order,base.group_user,1,1,1,1

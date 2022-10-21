@@ -1,0 +1,20 @@
+<odoo>
+<template id="custom_purchase_header_footer" inherit_id="web.external_layout_standard">
+	<xpath expr="//div[1]/div[3]" position="inside">
+    	<div class="oe_structure">
+            <div class="row mt32 mb32">
+                <div class="col-12">
+                    <strong>Order No:</strong>
+                    <span class="m-0" t-field="doc.name"/> 
+                    <br/>
+                    <strong>Order Date:</strong>
+                    <span class="m-0" t-field="doc.date_order"/>         
+                    <br/>
+                    <strong>User:</strong>
+                    <span class="m-0" t-field="doc.user_id"/>   
+                </div>
+            </div> 
+        </div>
+	</xpath>
+</template>
+</odoo>

@@ -1,0 +1,14 @@
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/workspace  --xmlrpc-port 9071 -d v15_hospital_management
+
+python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/Extra/Project/workspace  --xmlrpc-port 9075 -d library_management -u library_management
+
+
+python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/Export_csv  --xmlrpc-port 4015 -d export -u export_csv
+
+python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/sale_extended  --xmlrpc-port 4006 -d sale -u sale_extended
+
+python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/Extra/trading/project_trading --xmlrpc-port 4002 -d treding -u trading_management
+
+

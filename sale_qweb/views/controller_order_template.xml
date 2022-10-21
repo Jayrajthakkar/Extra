@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Index -->
+<template id="customer_template_page" name="Users">
+    <t t-call="website.layout">
+        <t t-set="additional_title">Users</t>
+        <h3 class='text-center mt-2 mb-2'>All Customers Details</h3>
+		<br/><br/>
+        <div id="wrap">
+            <div class="oe_structure">
+                <div class="page">
+                    <div class="container mt-3" style="padding:10px;" >
+                        <div class="row">
+                            <div class="col-3">
+                            <strong>Customer</strong>                        
+                            </div>
+                            <div class="col-2">
+                            <strong>Name</strong>                        
+                            </div>
+                            <div class="col-2">
+                            <strong>Phone</strong>                        
+                            </div>
+                            <div class="col-3">
+                            <strong>Email</strong>                        
+                            </div>
+                            <div class="col-2">
+                            <strong>Website</strong>                        
+                            </div>
+                        </div>
+                        <hr/>
+                     
+                        <div class="row" t-foreach="customers" t-as="customer">
+                            <div class="col-3">
+                                <img t-attf-src="/web/image/res.partner/#{customer.id}/image_1920" class="img img-responsive"/>
+                                <br/><br/>
+                            </div> 
+                            <div class="col-2">
+                                <t t-out="customer.name"/>
+                            </div> 
+                            <div class="col-2">
+                                <t t-out="customer.phone"/>
+                            </div>
+                            <div class="col-3">
+                                <t t-out="customer.email"/>
+                            </div>
+                            <div class="col-2">
+                                <t t-out="customer.website"/>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+    </div>
+    </t>
+</template>
+
+</odoo>

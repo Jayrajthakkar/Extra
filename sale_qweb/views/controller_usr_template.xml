@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Index -->
+<template id="user_template_page" name="Users">
+    <t t-call="website.layout">
+        <t t-set="additional_title">Users</t>
+        <h3 class='text-center mt-2 mb-2'>All User Details</h3>
+		<br/><br/>
+        <div id="wrap">
+            <div class="container">
+                <div class="row" t-foreach="users" t-as="user">
+                    <div class="col-4">
+                    	<img t-attf-src="/web/image/res.users/#{user.id}/image_1920" class="img img-responsive"/>
+                    	<br/><br/>
+                    </div> 
+                    <div class="col-4">
+                        <t t-out="user.name"/>
+                    </div> 
+                    <div class="col-4">
+                        <t t-out="user.partner_id.phone"/>
+                        <br/><br/>
+                        <t t-out="user.partner_id.email"/>
+                    </div> 
+                </div>
+            </div>
+        </div>
+            
+           
+    </t>
+</template>
+
+</odoo>
