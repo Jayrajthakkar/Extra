@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="confirm_mail" model="mail.template">
+            <field name="name">Confirm Mail: Send by email</field>
+            <field name="model_id" ref="sale.model_sale.order"/>
+            <field name="subject">Details of {{object.company_id.name}}</field>
+            <field name="email_from">{{(object.user_id.email_formatted or user.email_formatted)}}</field>
+            <field name="email_to">{{object.partner_ids.email and object.user_id.email}}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Hello,<t t-esc="object.partner_ids.id.name" />
+                        <br/><br/>
+                        I am <t t-esc = "object.user_id" /> connecting from <t t-esc="company_id.name" />
+                        <br/><br/>
+                        Our Company Email-id is  <t t-esc ='object.company_id.email'/>
+                        Our Company Phone  is  <t t-esc ='object.company_id.phone'/>
+
+                        <br/><br/>
+                        Do not hesitate to contact us if you have any questions.
+                        <br/>
+                      <!--   <p t-foreach ='object.sale_history_ids.visitor_id' t-as='name'>
+                                 <t t-out='name.name'/>
+                        </p> -->
+                    </p>
+
+                </div>
+
+
+            </field>
+            <!-- <field name="report_template" ref="action_report_saleorder"/>
+            <field name="report_name">{{ (object.name or '').replace('/','_') }}</field>
+             --><field name="lang">{{ object.partner_ids.lang }}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+     
+    </data>
+</odoo>

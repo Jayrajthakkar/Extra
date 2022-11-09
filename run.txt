@@ -12,3 +12,4 @@ python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/sale_extended  --xmlrp
 python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/Extra/trading/project_trading --xmlrpc-port 4002 -d treding -u trading_management
 
 
+python3 odoo-bin --addons-path=addons/,/home/odoo/Desktop/Extra --xmlrpc-port 9091 -d sale_qweb_15 -u sale_qweb

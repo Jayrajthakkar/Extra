@@ -1,0 +1,53 @@
+<odoo>
+<record id="sale_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+            	<field name="sale_price"/>
+            </xpath>
+            <xpath expr="//page[@name='customer_signature']" position="after">
+            	<page string = 'Test'>
+                    <form>
+                        <group>
+                            <field name="sale_price"/>
+                        </group>
+                    </form>
+                </page>
+            </xpath>
+
+            <xpath expr="//group[@name='note_group']/group[1]" position="inside">
+                <field name="sale_price"/>
+            </xpath>
+
+            <xpath expr="//field[@name='team_id']" position="attributes">
+                <attribute name="attrs">{'invisible': [('sale_price', '=', 100)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position='attributes'>
+                <attribute name='required'>1</attribute>
+            </xpath> 
+            <xpath expr="//div[@name='button_box']" position='inside'>
+                
+                        <button name="action_view_price" 
+                            type = 'object'
+                            class= "oe_stat_button" icon='fa-calendar' attrs = "{'invisible':[('sale_price','=',0)]}" >
+                            <div class='o_stat_info'>
+                                <field name='sale_price' class='o_stat_value'/>
+                                <span class='o_stat_text'>Price</span>
+                            </div>
+                        </button>
+                  
+            </xpath> 
+
+            <xpath expr='//field[@name="client_order_ref"]' position='replace'>
+                <field name='sale_date'/>
+            </xpath>
+
+
+
+
+        </field>
+    </record>
+
+</odoo>

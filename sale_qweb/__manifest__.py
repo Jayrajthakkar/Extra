@@ -13,9 +13,16 @@
             'report/action_sale_report.xml',
             'report/template_sale_report.xml',
             'views/controller_usr_template.xml',
+            'views/controller_partner_template.xml',
             'views/controller_order_template.xml',],
     'installable':True,
     'auto_install':False,
     'application':True,
     'license': 'LGPL-3',
+    'assets':{
+    'web.assets_frontend':[
+        'sale_qweb/static/src/css/portal.css']
+
+    }
+    
 }

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+export_csv.access_export_sale,access_export_sale,export_csv.model_export_sale,base.group_user,1,1,1,1
+
+export_csv.access_export_date_wizard,access_export_date_wizard,export_csv.model_export_date_wizard,base.group_user,1,1,1,1
+
+export_csv.access_o2m_data_wizard,access_o2m_data_wizard,export_csv.model_o2m_data_wizard,base.group_user,1,1,1,1
+
+export_csv.access_product_wizard,access_product_wizard,export_csv.model_product_wizard,base.group_user,1,1,1,1

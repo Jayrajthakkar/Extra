@@ -28,16 +28,18 @@
                             </div>
                         </div>
                         <hr/>
-                     
-                        <div class="row" t-foreach="customers" t-as="customer">
-                            <div class="col-3">
+                        
+                        <div class="row" t-foreach="customers" t-as="customer"
+                        >
+
+                            <div class="col-5">
                                 <img t-attf-src="/web/image/res.partner/#{customer.id}/image_1920" class="img img-responsive"/>
                                 <br/><br/>
                             </div> 
-                            <div class="col-2">
+                            <div class="col-1">
                                 <t t-out="customer.name"/>
                             </div> 
-                            <div class="col-2">
+                            <div class="col-1">
                                 <t t-out="customer.phone"/>
                             </div>
                             <div class="col-3">
@@ -49,7 +51,7 @@
                         </div> 
                     </div>
                 </div>
-            </div>
+                </div>
     </div>
     </t>
 </template>

@@ -1,0 +1,40 @@
+body{
+	 background-color: #000;
+}
+h1{
+	color: #57c1c6;
+	text-decoration: underline;
+}
+
+#container{
+	 background-color: #15172b;
+	 color: #eee;
+	 width: 60%;
+	 border: solid 2px #4d5491;
+	 margin-bottom: 5px;
+	 padding: 5px;
+	 border-radius: 5px;
+}	
+
+input[type=text], input[type=email], input[type=phone], input[type=file]{
+  width: 10	0%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background-color:  #303245;
+  color: #fff;
+}
+small{
+	color: #fff;
+}
+
+.submitbtn{
+  background-color: #57c1c6;
+  color: white;
+  padding: 5px 10px;
+  margin: 3px 0;
+  width: 20%;
+}
+.submitbtn:hover{
+	background-color: #02c981;
+}

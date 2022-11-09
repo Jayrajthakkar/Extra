@@ -1,0 +1,13 @@
+<odoo>
+        <record id="action_export" model="ir.actions.act_window">
+                <field name="name"></field>
+                <field name="res_model">export.sale</field>
+                <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id = "export_menu"
+                  name = "Export Sale"
+                  action="action_export_wizard"
+                  parent='sale.sale_order_menu'/>
+</odoo>
